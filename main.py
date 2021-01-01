@@ -36,13 +36,13 @@ while game_is_on:
 
     # moving all the cars
     for cars in allcars:
-        if player.distance(cars) < 35:
+        cars.movethecars()
+        if player.distance(cars) < 15:
             print("player", player.ycor())
             print("cars", cars.ycor())
             scoreboard.gameover()
             game_is_on = False
             break
-        cars.movethecars()
 
     # upgrade the level
     if player.ycor() >= 260:
